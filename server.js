@@ -12,8 +12,8 @@ const path = require("path");
 
 
 
- app.get("/api/users/student", (request, response) => {
-   db.query("SELECT * FROM student", (error, results) => {
+ app.get("/api/users", (request, response) => {
+   db.query("SELECT * FROM user", (error, results) => {
      if (error) {
        console.error("Database error:", error);
       return response.status(500).json({ message: "Server internal error" });
